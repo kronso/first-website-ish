@@ -1,0 +1,357 @@
+html, body {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 16px;
+    background-color: #111111;
+    color: #6da995;
+    height: 100%
+}   
+
+input {
+    margin-top: 20px;
+    /* border: 1px solid #6da995; */
+    border-radius: 5px;
+    padding: 5px;
+    transition: 250ms;
+    background-color: #15171a;
+}
+input:hover {
+    background-color: #181e1f;
+}
+input:focus {
+    background-color: #181e1f;
+}
+
+button, a {
+    cursor: pointer;
+    transition: 250ms;
+    user-select: none;
+}
+button:hover {
+    color: #4b6f8d;
+}
+
+a:hover {
+    filter: brightness(1.7);
+}
+
+
+.header-main {
+    width: 50%;
+    height: 70px;
+    margin: auto;
+
+    background-color: #15171a;
+    /* border: 1px solid #79988e; */
+    border-radius: 10px;
+    padding: 10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+}
+.header-main:hover {
+    background-color: #181e1f;
+}
+
+.header-main-left, .header-main-right {
+    width: 50%;
+    text-align: center;
+}
+
+.header-main nav ul li {
+    display: inline;
+}
+.header-main nav ul li a {
+    padding: 10px;
+}
+
+#caps-lock-popup {
+    width: 20%;
+
+    margin: auto;
+    position: relative;
+
+    padding: 10px;
+    border: 1px solid #6da995;
+    background-color: #181e1f;
+    text-align: center;
+
+    display: none;
+}
+
+#logo {
+    font-size: 30px;
+}
+/* game-mode bar */
+.game-bar {
+    width: 25%;
+    margin: auto;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    background-color: #15171a;
+    /* border: 1px solid #79988e; */
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* config-bar */
+.config-bar {
+    width: 30%;
+    margin: auto;
+
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    background-color: #15171a;
+    /* border: 1px solid #79988e; */
+    border-radius: 10px;
+    padding: 5px;
+}
+.type-racer-config-bar,
+.walking-words-config-bar {
+    display: none;
+}
+
+#config-spawn-content {
+    display: none;
+    word-spacing: 20px;
+}
+#config-words-content {
+    display: none;
+    word-spacing: 20px;
+}
+#config-difficulty-content {
+    display: none;
+    word-spacing: 20px;
+}
+#config-timer-content {
+    display: none;
+    word-spacing: 20px;
+}
+#config-speed-content {
+    display: none;
+    word-spacing: 20px;
+}
+#config-lives-content {
+    display: none;
+    word-spacing: 20px;
+}
+
+
+.user_input {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+} 
+
+.big-wrapper {
+    width: 40%;
+    height: 55%;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.timer {
+    position: absolute;  
+    align-self: center;
+}
+
+/* main screens to display game */
+/* Falling-words game-border*/
+.game-border {  
+    margin-bottom: 18px;
+    width: 100%;
+    height: 70%;
+
+    display: none;
+
+    background-color: #15171a;
+    color: #314941;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    padding: 10px;
+    border-radius: 5px;
+
+    overflow: hidden;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    /* IE and Edge */
+    -ms-overflow-style: none; 
+    /* Firefox */
+    scrollbar-width: none; 
+    transition-property: border;
+}
+
+/* Type-racer game-border */
+.type-racer {  
+    width: 100%;
+    height: 70px;
+    font-size: 18px;
+
+    /* background-color: #15171a; */
+    color: #314941;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    padding: 5px;
+    border-radius: 5px;
+    overflow-y: hidden;
+
+    text-align: center;
+}
+
+/* Walking-words game-border */
+.game-grid {  
+    margin-top: 40px;
+    height: 100%;
+
+    display: grid;
+
+    align-items: center;
+    grid-template-columns: repeat(8, auto); 
+    grid-template-rows: repeat(16, 24px); 
+    column-gap: 3px;
+    row-gap: 3px; 
+    justify-content: center;
+    text-align: center;
+}
+
+.game-grid div {
+    padding: 2px;
+    /* border: 1px solid #79988e; */
+    border-radius: 2px;
+    background-color: #15171a;
+    /* align-self: center; */
+    grid-template-rows: minmax(100px, auto);
+}
+
+/* hides the user input */
+.user-input {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* z-index: 1; */
+    text-align: center;
+    margin: auto;
+}
+
+/* Computers kinda */
+@media only screen and (max-width: 1500px) {
+    .header-main {
+        width: 70%;
+    }
+    .big-wrapper {
+        width: 50%;
+    } 
+    .game-bar {
+        width: 30%
+    }
+    .config-bar {
+        width: 40%
+    }
+}
+
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+    .header-main {
+        width: 90%;
+    }
+    .big-wrapper  {
+        width: 70%;
+    } 
+    .game-bar {
+        width: 60%
+    }
+    .config-bar {
+        width: 70%
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 428px) {
+    .header-main {
+        width: 90%;
+    }
+    .big-wrapper  {
+        width: 70%;
+    } 
+    .game-bar {
+        width: 80%
+    }
+    .config-bar {
+        width: 90%
+    }
+}
+
+/* typing-game */
+.word {
+    position: absolute;
+    /* padding: 2px; */
+    background-color: #15171a;
+    /* border-radius: 3px; */
+}
+
+.lives {
+    align-self: center;
+}
+
+/* User game-data */
+.game-data {
+    font-size: 18px;
+    margin-top: 10px;
+    width: 40%;
+    height: 30px;
+    margin: auto;
+    
+    background-color: #181e1f;
+    border: 1px solid #6da995;
+
+    /* border-radius: 10px; */
+    padding: 2px;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    margin-bottom: 200px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+/* .game-data div {
+    font-size: 30px;
+} */
+.game-data label {
+    color: #6da995;
+    font-size: 18px;
+}
+
+

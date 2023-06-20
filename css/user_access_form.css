@@ -1,0 +1,62 @@
+.user-access-wrapper {
+    width: 15%;
+    height: 40%;
+
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    border: 1px solid #79988e;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 30px;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #181e1f;
+}
+button:focus {
+    background-color: #181e1f;
+}
+
+.user-access-error {
+    margin-top: 20px;
+    text-align: center;
+
+    color: #ff4c4a;
+    background-color: #15171a;
+    
+    /* border: 2px solid #ff4c4a; */
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Computers kinda */
+@media only screen and (max-width: 1500px) {
+    .register-wrapper {
+        width: 20%;
+    } 
+}
+
+/* Tablets */
+@media only screen and (max-width: 1024px) {
+    .register-wrapper {
+        width: 30%;
+    } 
+}
+
+/* Phones */
+@media only screen and (max-width: 428px) {
+    .register-wrapper {
+        width: 70%;
+    } 
+}
